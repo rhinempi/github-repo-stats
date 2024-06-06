@@ -1,0 +1,36 @@
+name: fetch-repository-stats
+concurrency: fetch-repository-stats
+
+on:
+  schedule:
+    - cron: "0 23 * * *"
+  workflow_dispatch:
+
+jobs:
+  run-ghrs-with-matrix:
+    name: repostats-for-nfdi4microbiota
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # The repositories to generate reports for.
+        statsRepo:
+         # - ClavelLab/maldipickr
+         # - ClavelLab/genome-assembly
+         # - ClavelLab/miBC
+         # - FAIR-MI/miiid-schema
+         # - NFDI4Microbiota/MetadataStandards
+         # - NFDI4Microbiota/nfdi4microbiota-knowledge-base
+         # - thh32/Protologger
+         # - rhinempi/sparkhit
+      # Do not cancel&fail all remaining jobs upon first job failure.
+      fail-fast: false
+      # Help avoid commit conflicts. Note(JP): this should not be
+      # necessary anymore, feedback appreciated
+      max-parallel: 1
+    steps:
+      - name: run-ghrs
+        uses: jgehrcke/github-repo-stats@v1.4.2
+        with:
+          repository: ${{ matrix.statsRepo }}
+          ghpagesprefix: https://clavellab.github.io/github-repo-stats
+          ghtoken: ${{ secrets.ghrs_github_api_token }}
