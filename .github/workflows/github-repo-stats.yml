@@ -1,12 +1,12 @@
 name: fetch-repository-stats
 concurrency: fetch-repository-stats
 
-#on: [push]
+on: [push]
 
-on:
-  schedule:
-    - cron: "0 23 * * *"
-  workflow_dispatch:
+#on:
+#  schedule:
+#    - cron: "0 23 * * *"
+#  workflow_dispatch:
 
 jobs:
   run-ghrs-with-matrix:
@@ -31,8 +31,8 @@ jobs:
       max-parallel: 1
     steps:
       - name: run-ghrs
-        uses: jgehrcke/github-repo-stats@v1.4.2
+        uses: rhinempi/github-repo-stats@v0.1.0
         with:
           repository: ${{ matrix.statsRepo }}
           ghpagesprefix: https://clavellab.github.io/github-repo-stats
-          ghtoken: ${{ secrets.ghrs_github_api_token }}
+          ghtoken: ${{ secrets.ghrs_github_api_token_2 }}
