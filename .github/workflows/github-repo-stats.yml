@@ -21,7 +21,7 @@ jobs:
          # - NFDI4Microbiota/MetadataStandards
          # - NFDI4Microbiota/nfdi4microbiota-knowledge-base
          # - thh32/Protologger
-         # - rhinempi/sparkhit
+         - rhinempi/sparkhit
       # Do not cancel&fail all remaining jobs upon first job failure.
       fail-fast: false
       # Help avoid commit conflicts. Note(JP): this should not be
