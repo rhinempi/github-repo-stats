@@ -1,10 +1,12 @@
 name: fetch-repository-stats
 concurrency: fetch-repository-stats
 
-on:
-  schedule:
-    - cron: "0 23 * * *"
-  workflow_dispatch:
+on: [push]
+
+#on:
+#  schedule:
+#    - cron: "0 23 * * *"
+#  workflow_dispatch:
 
 jobs:
   run-ghrs-with-matrix:
