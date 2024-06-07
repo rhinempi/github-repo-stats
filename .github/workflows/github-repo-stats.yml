@@ -35,4 +35,4 @@ jobs:
         with:
           repository: ${{ matrix.statsRepo }}
           ghpagesprefix: https://clavellab.github.io/github-repo-stats
-          ghtoken: ${{ secrets.ghrs_github_api_token_2 }}
+          ghtoken: ${{ secrets.ghrs_github_api_token_fine_1 }}
