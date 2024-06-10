@@ -303,6 +303,8 @@ do
     set -x
     git pull origin "${DATA_BRANCH_NAME}" || echo "pull failed, ignore (continue)"
 
+    export GHRS_GITHUB_API_TOKEN="${INPUT_OWNTOKEN}"
+
     set +e
     git push --set-upstream origin "${DATA_BRANCH_NAME}"
     PUSH_ECODE=$?
