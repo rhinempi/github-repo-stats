@@ -228,6 +228,8 @@ python "${GHRS_FILES_ROOT_PATH}/pdf.py" latest-report/report_for_pdf.html latest
 git add latest-report
 set +x
 
+ export GHRS_GITHUB_API_TOKEN="${INPUT_OWNTOKEN}"
+
 echo "generate README.md"
 cat << EOF > README.md
 ## github-repo-stats for ${STATS_REPOSPEC}
