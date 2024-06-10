@@ -201,7 +201,7 @@ def gen_report_footer():
 def gen_report_preamble():
     now_text = NOW.strftime("%Y-%m-%d %H:%M UTC")
     attr_link = (
-        "[jgehrcke/github-repo-stats](https://github.com/jgehrcke/github-repo-stats)"
+        "[rhinempi/github-repo-stats](https://github.com/rhinempi/github-repo-stats)"
     )
     MD_REPORT.write(
         textwrap.dedent(
