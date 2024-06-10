@@ -1,8 +1,8 @@
 GIT_COMMIT_HASH ?= $(shell git rev-parse --short=9 HEAD)
 
-BASE_IMAGE_NAME = jgehrcke/github-repo-stats-base:5e4b35d29
-NEW_BASE_IMAGE_NAME = jgehrcke/github-repo-stats-base:$(GIT_COMMIT_HASH)
-CI_IMAGE = jgehrcke/github-repo-stats-ci:$(GIT_COMMIT_HASH)
+BASE_IMAGE_NAME = rhinempi/github-repo-stats-base:5e4b35d29
+NEW_BASE_IMAGE_NAME = rhinempi/github-repo-stats-base:$(GIT_COMMIT_HASH)
+CI_IMAGE = rhinempi/github-repo-stats-ci:$(GIT_COMMIT_HASH)
 
 .PHONY: new-base-image
 new-base-image:
@@ -23,7 +23,7 @@ ci-image:
 # others use this GH action.
 .PHONY: action-image
 action-image:
-	docker build -f Dockerfile . -t jgehrcke/github-repo-stats:local
+	docker build -f Dockerfile . -t rhinempi/github-repo-stats:local
 
 .PHONY: clitests
 clitests: ci-image
