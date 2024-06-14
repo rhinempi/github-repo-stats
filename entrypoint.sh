@@ -8,6 +8,7 @@ set -o pipefail
 # GHRS: GitHub Repo Stats https://github.com/jgehrcke/github-repo-stats
 
 echo "GHRS entrypoint.sh: pwd: $(pwd)"
+echo "Am I been used ??? "
 
 RNDSTR=$(python -c 'import uuid; print(uuid.uuid4().hex.upper()[0:4])')
 UPDATE_ID="$(date +"%m-%d-%H%M" --utc)-${RNDSTR}"
