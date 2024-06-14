@@ -1,4 +1,4 @@
-FROM rhinempi/github-repo-stats-base:e87aa5891
+FROM rhinempi/github-repo-stats-base:1b3fb79bd
 
 # Install GNU parallel
 RUN apt-get update && apt-get install -y -q --no-install-recommends \
