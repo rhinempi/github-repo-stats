@@ -14,6 +14,9 @@ inputs:
       GitHub API token for reading the GitHub repository traffic API and
       for interacting with the data repo. Required.
     required: true
+  owntoken:
+    description: >
+      GitHub API token for push results to data repo
   databranch:
     description: >
       Data branch: Branch to push data to (in the data repo).
