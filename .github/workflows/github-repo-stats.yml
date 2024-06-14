@@ -10,7 +10,7 @@ on: [push]
 
 jobs:
   run-ghrs-with-matrix:
-    name: repostats-for-nfdi4microbiota
+    name: repostats-for-nfdi4microbiota-test
     runs-on: ubuntu-latest
     strategy:
       matrix:
