@@ -1,4 +1,4 @@
-FROM rhinempi/github-repo-stats-base:e87aa5891
+FROM rhinempi/github-repo-stats-base:1b3fb79bd
 
 COPY fetch.py /fetch.py
 COPY analyze.py /analyze.py
