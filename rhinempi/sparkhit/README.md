@@ -6,5 +6,3 @@
 
 **Latest report PDF**: [GitHub-rendered](https://github.com/rhinempi/github-repo-stats/blob/github-repo-stats/rhinempi/sparkhit/latest-report/report.pdf), [raw](https://github.com/rhinempi/github-repo-stats/raw/github-repo-stats/rhinempi/sparkhit/latest-report/report.pdf)
 
-
-**Latest report HTML via GitHub pages**: [report.html](https://clavellab.github.io/github-repo-stats/rhinempi/sparkhit/latest-report/report.html)
