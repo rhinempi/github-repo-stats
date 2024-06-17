@@ -22,7 +22,7 @@ jobs:
          # - FAIR-MI/miiid-schema
          # - NFDI4Microbiota/MetadataStandards
          # - NFDI4Microbiota/nfdi4microbiota-knowledge-base
-         # - thh32/Protologger
+         - thh32/Protologger
          - rhinempi/sparkhit
       # Do not cancel&fail all remaining jobs upon first job failure.
       fail-fast: false
