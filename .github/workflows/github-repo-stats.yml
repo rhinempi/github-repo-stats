@@ -34,6 +34,6 @@ jobs:
         uses: rhinempi/github-repo-stats@v0.1.0
         with:
           repository: ${{ matrix.statsRepo }}
-          ghpagesprefix: https://clavellab.github.io/github-repo-stats
+         # ghpagesprefix: https://clavellab.github.io/github-repo-stats
           ghtoken: ${{ secrets.ghrs_github_api_token_2 }}
           owntoken: ${{ secrets.ghrs_github_api_token_2 }}
