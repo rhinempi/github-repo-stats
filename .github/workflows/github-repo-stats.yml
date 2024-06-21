@@ -37,4 +37,5 @@ jobs:
          # ghpagesprefix: https://clavellab.github.io/github-repo-stats
           ghtoken: ${{ secrets.ghrs_github_api_token_2 }}
           owntoken: ${{ secrets.ghrs_github_api_token_2 }}
+        env:
           GHRS_DATA_REPOSPEC_OVERRIDE: rhinempi/ghrs-test
