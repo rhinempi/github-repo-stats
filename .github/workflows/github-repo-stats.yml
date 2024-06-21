@@ -39,3 +39,5 @@ jobs:
           owntoken: ${{ secrets.ghrs_github_api_token_2 }}
         env:
           GHRS_DATA_REPOSPEC_OVERRIDE: rhinempi/ghrs-test
+          GHRS_TESTING: true
+          GHRS_FILES_ROOT_PATH: /
