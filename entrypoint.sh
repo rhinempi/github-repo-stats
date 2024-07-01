@@ -309,7 +309,8 @@ do
     export GHRS_GITHUB_API_TOKEN="${INPUT_OWNTOKEN}"
 
     set +e
-    git push --set-upstream origin https://rhinempi:${INPUT_OWNTOKEN}@github.com/rhinempi/github-repo-stats.git
+    git remote set-url origin https://rhinempi:${INPUT_OWNTOKEN}@github.com/rhinempi/github-repo-stats.git
+    git push
     PUSH_ECODE=$?
     set -e
     set +x
