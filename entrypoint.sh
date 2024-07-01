@@ -308,10 +308,8 @@ do
 
     export GHRS_GITHUB_API_TOKEN="${INPUT_OWNTOKEN}"
 
-    echo "rhinempi/MSframe"
-
     set +e
-    git push --set-upstream origin --repo rhinempi/MSframe "${DATA_BRANCH_NAME}"
+    git push --set-upstream origin --repo "${DATA_BRANCH_NAME}"
     PUSH_ECODE=$?
     set -e
     set +x
