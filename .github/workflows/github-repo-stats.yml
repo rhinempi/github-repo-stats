@@ -1,7 +1,7 @@
 name: fetch-repository-stats
 concurrency: fetch-repository-stats
 
-on: [push]
+on: workflow_dispatch
 
 #on:
 #  schedule:
