@@ -304,12 +304,12 @@ do
     #   succeed, and create the remote branch.
 
     set -x
-    git pull origin "${DATA_BRANCH_NAME}" || echo "pull failed, ignore (continue)"
+    git pull origin "${DATA_REPOSPEC}" || echo "pull failed, ignore (continue)"
 
     export GHRS_GITHUB_API_TOKEN="${INPUT_OWNTOKEN}"
 
     set +e
-    git remote set-url origin https://rhinempi:${INPUT_OWNTOKEN}@github.com/rhinempi/${DATA_BRANCH_NAME}.git
+    git remote set-url origin https://rhinempi:${INPUT_OWNTOKEN}@github.com/rhinempi/${DATA_REPOSPEC}.git
     git push
     PUSH_ECODE=$?
     set -e
