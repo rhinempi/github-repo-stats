@@ -196,6 +196,14 @@ def fetch_and_write_stargazer_ts(repo: Repository.Repository, args):
             tmppath,
             args.stargazer_ts_snapshots_inoutpath,
         )
+        
+        # Define the directory where the CSV will be saved
+        output_dir = 'ghrs-data'
+
+        # Check if the directory exists, and create it if it doesn't
+        if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+        
         updated_sdf.to_csv(tmppath, index_label="time_iso8601")
         os.rename(tmppath, args.stargazer_ts_snapshots_inoutpath)
 
